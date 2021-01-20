@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+--darkGray: hsl(0, 0%, 59%);
+--darkCyan: hsl(185, 75%, 39%);
+--desatBlue: hsl(229, 23%, 23%);
+--grayBlue:  hsl(227, 10%, 46%);
+}
+
 body {
     height: 100vh;
-    background-color: hsl(185, 75%, 39%);
+    background-color: var(--darkCyan);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 18px;
 }
 
 .attribution {
@@ -38,6 +49,46 @@ body {
     border-radius: 50%;
 }
 
+.card-details {
+    text-align: center;
+}
+
+.name {
+    width: 50%;
+    margin: 50px auto 15px;
+}
+
+.city, .age {
+    color: var(--darkGray);
+    font-weight: 400;
+}
+
+.city {
+    font-size: 1.2rem;
+}
+
+.age {
+    margin-left: 10px;
+}
+
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--darkGray);
+    margin-top: 60px;
+    padding-top: 15px;
+}
+
+.soc-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+
+.soc-details p {
+    color: var(--grayBlue);
+    letter-spacing: 1px;
+}
+
 .circle {
     position: absolute;
     height: 1000px;
@@ -54,8 +105,6 @@ body {
     bottom: -500px;
     right: -275px;
 }
-
-
 
 /* MOBILE */
 
@@ -74,6 +123,21 @@ body {
     #circle-bottom {
         bottom: -200px;
         right: -200px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 400px;
+        height: 550px;
+        border-radius: 5%;
+        background-size: 125%;
+    }
+
+    .card-image {
+        margin-top: 28%;
     }
     
 }
